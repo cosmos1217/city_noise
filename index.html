@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
+    </head>
+    <body>
+        <script>
+             //2
+            let y = 0;
+            let x = 0;
+
+            // 3
+            let space = 60;
+
+            function setup() {
+            createCanvas(windowWidth, windowHeight);
+            background(0,0,50,100);
+            }
+
+            function draw() {
+            stroke(12);
+            strokeWeight(0.3);
+            textSize(30);
+            textAlign(LEFT);
+            
+
+            // 1
+            // if(random(1) < 0.5){
+            //   line(0,0,10,10);
+            // }else{
+            //   line(0,10,10,0);
+            // }
+
+            // 2
+            // if (random(1) < 0.5) {
+            //   line(x, y, x + 10, y + 10);
+            // } else {
+            //   line(x, y + 10, x + 10, y);
+            // }
+            // x+= 10;
+
+
+            if (random(1) < 0.1) {
+                stroke(random(255));
+                line(x, y, x+ space, y + space);
+                textSize(35);
+                background(0);
+                text('Clarkson',x,y);
+
+            } else if(random(1)<0.03){
+                fill(random(255));
+                rect(x,y,x+space,y+space);
+                stroke(random(255));
+                textSize(150);
+                text('people say',x,y);
+                stroke(random(255));
+            }
+            else if(random(1)>0.5){
+                //noFill();
+                //rect(x,y,space,space);
+                stroke(random(255));
+                textSize(80);
+                text('noise',x,y);
+            }
+            else {
+                stroke(random(255));
+                //noFill();
+                rect(x,y,space,space);
+                text('noooisy',x,y);
+                stroke(random(255));
+            }
+            x+= 20;
+
+            // y += 10; ? no, why not, what do we want and how could we achive it?
+            //
+            if(x > width){
+                x = 0;
+                y = y + space;
+            }
+
+       
+        }
+
+        </script>
+    </body>
+</html>
