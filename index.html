@@ -9,7 +9,7 @@
             let x = 0;
 
             // 3
-            let space = 120;
+            let space = 10;
         
 
             function setup() {
@@ -77,6 +77,9 @@
                 x = 0;
                 y = y + space;
             }
+            if(y > height){
+                Loop();
+              }
 
        
         }
