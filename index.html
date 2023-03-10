@@ -39,40 +39,65 @@
             // x+= 10;
 
 
-            if (random(1) < 0.1) {
+            if (random(1) < 0.02) {
+                fill(random(255));
                 stroke(random(255));
                 line(x, y, x+ space, y + space);
                 textSize(25);
-                text('Clarkson',x,y);
-
-            } else if(random(1)<0.03){
+                text('뭐라고 하는거지?',x,y);
+            }
+            
+            if (random(1) < 0.07) {
+                fill(random(255));
+                stroke(random(255));
+                line(x, y, x+ space, y + space);
+                textSize(25);
+                text('다시 말해봐!',x,y);
+            }
+             else if(random(1)<0.03){
                 fill(random(255));
                 rect(x,y,x+space,y+space);
-                stroke(random(255));
                 textSize(random(40,180));
                 text('word',x,y);
                 stroke(random(255));
             }
-            else if(random(1)>0.5){
+            else if(random(1)>0.6){
                 //noFill();
                 //rect(x,y,space,space);
                 stroke(random(255));
-                textSize(80);
+                textSize(random(20,40));
                 text('noise',x,y);
             }
 
             else if(random(1)>0.2){
                 //noFill();
                 //rect(x,y,space,space);
-                stroke(random(20,140));
-                textSize(random(40,180));
+                stroke(random(255));
+                textSize(random(10,180));
                 text('...',x,y);
+            }
+
+            else if(random(1)>0.3){
+                //noFill();
+                //rect(x,y,space,space);
+                stroke(random(255));
+                textSize(random(10,180));
+                text('!!!',x,y);
+            }
+
+
+            else if(random(1)>0.04){
+                //noFill();
+                //rect(x,y,space,space);
+                stroke(random(255));
+                textSize(random(40,180));
+                text('',x,y);
             }
 
             else {
                 stroke(random(255));
                 //noFill();
-                textSize(200);
+                textSize(random(100,200));
                 rect(x,y,space,space);
                 text('noisy',x,y);
                 stroke(random(255));
