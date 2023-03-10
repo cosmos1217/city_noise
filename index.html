@@ -2,25 +2,24 @@
     <head>
         <script src="https://cdn.jsdelivr.net/npm/p5@1.6.0/lib/p5.min.js"></script>
     </head>
-    <body topmargin="0"  leftmargin="0" marginwidth="0" marginheight="0">
+    <body>
         <script>
              //2
             let y = 0;
             let x = 0;
 
             // 3
-            let space = 10;
-        
+            let space = 45;
 
             function setup() {
             createCanvas(windowWidth, windowHeight);
-            background(0,0,50,100);
+            background(0);
             }
 
             function draw() {
             stroke(255);
-            strokeWeight(0.3);
-            textSize(30);
+            strokeWeight(0.1);
+            textSize(8);
             textAlign(LEFT);
             
 
@@ -43,16 +42,15 @@
             if (random(1) < 0.1) {
                 stroke(random(255));
                 line(x, y, x+ space, y + space);
-                textSize(35);
-                background(0);
+                textSize(25);
                 text('Clarkson',x,y);
 
             } else if(random(1)<0.03){
                 fill(random(255));
                 rect(x,y,x+space,y+space);
                 stroke(random(255));
-                textSize(150);
-                text('people say',x,y);
+                textSize(random(40,180));
+                text('word',x,y);
                 stroke(random(255));
             }
             else if(random(1)>0.5){
@@ -62,13 +60,25 @@
                 textSize(80);
                 text('noise',x,y);
             }
+
+            else if(random(1)>0.2){
+                //noFill();
+                //rect(x,y,space,space);
+                stroke(random(20,140));
+                textSize(random(40,180));
+                text('...',x,y);
+            }
+
             else {
                 stroke(random(255));
                 //noFill();
+                textSize(200);
                 rect(x,y,space,space);
-                text('noooisy',x,y);
+                text('noisy',x,y);
                 stroke(random(255));
             }
+
+
             x+= 20;
 
             // y += 10; ? no, why not, what do we want and how could we achive it?
@@ -78,8 +88,8 @@
                 y = y + space;
             }
             if(y > height){
-               redraw();
-              }
+                noLoop();
+            }
 
        
         }
