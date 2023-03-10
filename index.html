@@ -52,13 +52,13 @@
                 stroke(random(255));
                 line(x, y, x+ space, y + space);
                 textSize(25);
-                text('다시 말해봐!',x,y);
+                text('안 들려!',x,y);
             }
              else if(random(1)<0.03){
                 fill(random(255));
                 rect(x,y,x+space,y+space);
                 textSize(random(40,180));
-                text('word',x,y);
+                text('noise',x,y);
                 stroke(random(255));
             }
             else if(random(1)>0.6){
@@ -66,7 +66,7 @@
                 //rect(x,y,space,space);
                 stroke(random(255));
                 textSize(random(20,40));
-                text('noise',x,y);
+                text('word',x,y);
             }
 
             else if(random(1)>0.2){
